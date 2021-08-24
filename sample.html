@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Lispy - Syntax Highlighting for (Common) Lisp</title>
+<link rel="stylesheet" href="lispy.css">
+<script src="lispy.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => lispy(document.querySelectorAll('.lispy code')))</script>
+</head>
+<body>
+<h1>Lispy - Syntax Highlighting for (Common) Lisp</h1>
+<p>Here's the old standby, Hello World!</p>
+<pre class="lispy"><code>(defun hello (who)
+  (format t "Hello, ~a!~%" who))</code></pre>
+
+<p>Here's a more complicated example, a function that builds subsequent in-order sublists given a single input list (this crops up a lot in compiler writing, as it turns out):</p>
+<pre class="lispy"><code>(defun sublists (lst)
+  (labels ((build-me-up (last args)
+             (cond ((null args) nil)
+                   (t (let ((new-last (append last (list (car args)))))
+                        (cons new-last
+                              (build-me-up new-last (cdr args))))))))
+     (build-me-up nil lst)))</code></pre>
+</body>
+</html>

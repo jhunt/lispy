@@ -21,5 +21,9 @@ something like this:
 
 ```html
 <pre class="lispy"><code>(defun hello (who)
-  (format nil "Hello, ~a!~%" who)</code></pre>
+  (format t "Hello, ~a!~%" who))</code></pre>
 ```
+
+... which will look a little something like this:
+
+![Screenshot of Hello World Program](hello.png)
