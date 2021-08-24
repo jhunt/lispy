@@ -1,0 +1,33 @@
+/* Lispy default theme. https://github.com/jhunt/lispy
+   Copyright (c) 2021 Hunt Productions, Inc. */
+pre.lispy code {
+  display: block;
+  background-color: #111;
+  color: #eee;
+  padding: 1em;
+  border-radius: 4pt;
+  font-size: 120%;
+}
+pre.lispy code .open-paren,
+pre.lispy code .close-paren,
+pre.lispy code .q
+{
+  color: #ff000ce3;
+  font-weight: bold;
+}
+pre.lispy code .qq {
+  color: #2e65e8;
+  font-weight: bold;
+}
+pre.lispy code .string-literal {
+  color: #ff3cf3;
+  font-weight: bold;
+}
+pre.lispy code .keyword {
+  color: #f8ff2a;
+  font-weight: normal;
+}
+pre.lispy code .special {
+  color: #22ff22de;
+  font-weight: normal;
+}
